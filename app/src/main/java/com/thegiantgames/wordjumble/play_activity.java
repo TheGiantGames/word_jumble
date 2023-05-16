@@ -19,6 +19,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -160,6 +161,7 @@ public class play_activity extends AppCompatActivity {
 
                 if(word_typed.equals(word)){
 
+                    Toast.makeText(play_activity.this, "Correct", Toast.LENGTH_SHORT).show();
                     gameOverDialog(); //Creating Game Over Dialog
 
                     MediaPlayer mediaPlayer = MediaPlayer.create(play_activity.this , R.raw.win);
@@ -168,6 +170,7 @@ public class play_activity extends AppCompatActivity {
                 }
                 else {
 
+                    Toast.makeText(play_activity.this, "Wrong", Toast.LENGTH_SHORT).show();
 
                     MediaPlayer mediaPlayer = MediaPlayer.create(play_activity.this , R.raw.error);
                     MediaPlayer mediaPlayer2 = MediaPlayer.create(play_activity.this , R.raw.failure);
@@ -205,7 +208,7 @@ public class play_activity extends AppCompatActivity {
         btn_reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Toast.makeText(play_activity.this, "Reset", Toast.LENGTH_SHORT).show();
                 resetGridview();
 
             }
