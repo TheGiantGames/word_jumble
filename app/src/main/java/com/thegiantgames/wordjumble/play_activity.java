@@ -126,7 +126,7 @@ public class play_activity extends AppCompatActivity {
 
 
 
-                correct(arrayList_textview).get(index).setText(charAtPostion +" ");
+                arrayElement(arrayList_textview).get(index).setText(charAtPostion +" ");
                 index = index +1;
 
 
@@ -245,7 +245,7 @@ public class play_activity extends AppCompatActivity {
 
 
 
-    public ArrayList<TextView> correct(ArrayList<TextView> array){
+    public ArrayList<TextView> arrayElement(ArrayList<TextView> array){
         array = arrayList_textview;
         return array;
     }
